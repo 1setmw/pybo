@@ -155,6 +155,11 @@
         <input type="submit" value="답변등록" class="btn btn-primary">
     </form>
 </div>
+<form id="searchForm" method="get" action="{% url 'index' %}">
+    <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
+    <input type="hidden" id="page" name="page" value="{{ page }}">
+    <input type="hidden" id="so" name="so" value="{{ so }}">
+</form>
 {% endblock %}
 {% block script %}
 <script type='text/javascript'>
